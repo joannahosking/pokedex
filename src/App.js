@@ -73,7 +73,7 @@ const App = () => {
       return (
         <div className="pokewrapper">
           <div className="headline">
-            <span className="number">#{pokemon.id}</span>
+            <span className="number" aria-label={pokemon.id}>#{pokemon.id}</span>
             <span className="name">{pokemon.name}</span>
             <ColorExtractor getColors={colors => setPrimaryColor(colors[1])}>
               <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} className="sprite" />
