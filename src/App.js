@@ -46,7 +46,7 @@ const App = () => {
         <div className="jumpto">
           <label htmlFor="jump">JUMP TO: </label>
           <select name="jump" id="jump" onChange={e => handleDropdown(e)}>
-            <option value="null">--</option>
+            <option value="null">###</option>
             {dropdownOptions.map((opt, key) => {
               return (
                 <option key={key} value={opt}>

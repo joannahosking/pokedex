@@ -185,6 +185,7 @@ $primary: red;
     }
 
     .pokemeta {
+        width: 30%;
         padding: 15% 0 0 30px;
 
         ul {
@@ -226,5 +227,141 @@ $primary: red;
         box-shadow: 1px 1px 6px rgba(#000, 0.5);
         font-size: 15px;
         text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .pokewrapper {
+        .headline, .pokemeta {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .overlay {
+        svg {
+            height: 75%;
+        }
+    }
+
+    .pokewrapper {
+        .headline {
+            .number {
+                font-size: 96px;
+            }
+
+            .name {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .overlay {
+        svg {
+            height: 50%;
+        }
+    }
+
+    .nav {
+        width: 35px;
+        padding: 15px;
+
+        button {
+            height: 35px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    .pokewrapper {
+        flex-direction: column;
+
+        .headline, .pokemeta {
+            width: 100%;
+        }
+
+        .headline {
+            .number {
+                font-size: 72px;
+            }
+
+            .name {
+                font-size: 32px;
+            }
+        }
+
+        .sprite {
+            max-height: 35vh;
+        }
+
+        .pokemeta {
+            padding: 10px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 15px 0 0;
+
+        .logo, .jumpto {
+            width: 100%;
+            text-align: center;
+        }
+
+        .jumpto {
+            margin: 12px 0;
+            padding: 3px 0;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .nav {
+        padding: 5px;
+    }
+
+    .pokewrapper {
+        max-width: calc(100% - 100px);
+
+        .headline {
+            .number {
+                font-size: 54px;
+            }
+
+            .name {
+                padding-left: 10px;
+                font-size: 24px;
+                letter-spacing: 2px;
+            }
+        }
+
+        .sprite {
+            max-height: 30vh;
+            padding: 15px 0;
+        }
+
+        .pokemeta li {
+            margin: 0 8px 0 0;
+        }
+
+        .details {
+            font-size: 15px;
+        }
+
+        .stat {
+            margin: 10px 10px 0 0;
+            padding: 3px 8px;
+            font-size: 13px;
+        }
     }
 }
