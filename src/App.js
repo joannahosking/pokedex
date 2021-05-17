@@ -38,12 +38,14 @@ const App = () => {
     }
   }
 
+  // let's hide Mew for an easter egg :)
   React.useEffect(() => {
-    console.log(pokemon.id);
-    if (pokemon.id === 150 && nextButton === '>') {
-      setNextButton('?');
-    } else if (pokemon.id !== 150 && nextButton === '?') {
-      setNextButton('>');
+    if (pokemon) {
+      if (pokemon.id === 150 && nextButton === '>') {
+        setNextButton('?');
+      } else if (pokemon.id !== 150 && nextButton === '?') {
+        setNextButton('>');
+      }
     }
   }, [pokemon]);
 
