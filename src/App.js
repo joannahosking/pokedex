@@ -10,6 +10,7 @@ const App = () => {
   const [pokemon, setPokemon] = React.useState();
   const [counter, setCounter] = React.useState(1);
   const [primaryColor, setPrimaryColor] = React.useState();
+  const [nextButton, setNextButton] = React.useState('>');
   const uri = 'https://pokeapi.co/api/v2/pokemon/';
   const totalPokemon = 151;
 
@@ -36,6 +37,15 @@ const App = () => {
       setCounter(e.target.value);
     }
   }
+
+  React.useEffect(() => {
+    console.log(pokemon.id);
+    if (pokemon.id === 150 && nextButton === '>') {
+      setNextButton('?');
+    } else if (pokemon.id !== 150 && nextButton === '?') {
+      setNextButton('>');
+    }
+  }, [pokemon]);
 
   const Header = () => {
     return (
@@ -123,7 +133,7 @@ const App = () => {
       <PokemonDetails />
       <div className="nav">
         {counter < 151 &&
-          <button onClick={() => updatePokemon(1)}>&#62;</button>
+          <button onClick={() => updatePokemon(1)}>{nextButton}</button>
         }
       </div>
       <Footer />
