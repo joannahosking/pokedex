@@ -142,6 +142,7 @@ $primary: red;
 
 .pokewrapper {
     display: flex;
+    width: calc(100% - 200px);
     max-width: 1050px;
     justify-content: center;
     align-items: center;
@@ -287,6 +288,7 @@ $primary: red;
     }
 
     .pokewrapper {
+        width: calc(100% - 130px);
         flex-direction: column;
 
         .headline, .pokemeta {
